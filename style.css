@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --black: #000;
+    --white: #fff;
+    --main-color: #418cfd;
+    --gradient: #D8F4FF;
+    --second-color: #eef5ff;
+    --title: #242930;
+    --sub-title: #777;
+    --light-blue: #f9fbff;
+}
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Small Framework ._. */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--second-color);
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.all-btn {
+    margin: 50px 0;
+}
+.btn:hover {
+    background-color: #2067d1;
+}
+.title {
+    font-size: 48px;
+    color: var(--title);
+    line-height: 60px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.sub-title {
+    color: var(--sub-title);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.title-container {
+    margin-bottom: 50px;
+}
+.title-container .title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 35px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.title-container .title::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: -5px;
+    border-radius: 50px;
+}
+.title-container .sub-title {
+    width: 50%;
+    text-align: center;
+    color: var(--title);
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.column {
+    flex-direction: column;
+}
+.container {
+    max-width: 1270px;
+    width: 100%;
+    margin: auto;
+    padding: 0 25px;
+}
+
+/* Start Home Page */
+
+.home .top {
+    background-color: var(--main-color);
+    padding: 10px 150px;
+}
+.home .top img {
+    width: 20px;
+}
+.home .top span {
+    color: var(--white);
+    margin-left: 10px;
+}
+.home .top .social a {
+    margin-left: 10px;
+}
+.home .container .logos {
+    padding: 10px 0;
+}
+.home .container .logos .logo {
+    width: 200px;
+}
+.home .container .logos .small-services .info {
+    margin-left: 10px;
+    color: var(--title);
+    font-weight: 600;
+}
+.home .container .logos .small-services .vertical-line {
+    height: 50px;
+    width: 2px;
+    background-color: var(--second-color);
+    margin: 0 20px;
+}
+.home .container .links {
+    padding: 20px 0;
+    border-top: 2px solid var(--gradient);
+}
+.home .container .links li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+.home .container .links li::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.home .container .links li:hover::before {
+    width: 100%;
+}
+.home .container .links li a {
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 600;
+    transition: 0.3s;
+}
+.home .container .links li:hover a {
+    color: var(--main-color);
+}
+.home .container .content {
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+.home .container .content .info{
+    width: 50%;
+}
+.image{
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(45deg, var(--gradient), var(--main-color));
+    border-radius: 50% 0% 0 0;
+    position: relative;
+}
+.image img {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 700px;
+}
+.menu-icon {
+    display: none;
+}
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 124578;
+    transition: 0.3s;
+}
+.overlay li {
+    margin-top: 20px;
+}
+.overlay li a {
+    color: var(--main-color);
+    font-size: 20px;
+}
+.close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--gradient);
+    font-size: 30px;
+}
+.close:hover {
+    color: var(--main-color);
+}
+#to-top {
+    position: fixed;
+    bottom: -50px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    color: var(--gradient);
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1245780;
+}
+#to-top:hover {
+    background-color: #2067d1;
+}
+/* Start About Overlay */
+
+.about {
+    padding: 0 0 100px;
+}
+.about .cards {
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.about .cards .info .title {
+    font-size: 18px;
+    margin-bottom: -5px;
+    color: var(--main-color);
+}
+.about .cards .info .sub-title {
+    margin: 0;
+}
+.about .cards .info {
+    margin-left: 20px;
+    margin-top: -20px;
+}
+.about .cards .card {
+    padding: 50px 30px;
+    border: 2px solid var(--second-color);
+    border-top: 10px solid var(--main-color);
+    border-radius: 15px;
+    width: 345px;
+    align-items: flex-start;
+}
+
+/* Start Services Section */
+
+.services .service .image {
+    width: 500px;
+    height: 500px;
+    border-radius: 0 50% 0 0;
+}
+.services .service .image img {
+    right: 50px;
+    width: 400px;
+}
+.services .service .cards {
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.services .service .cards .card {
+    width: 280px;
+    height: 300px;
+    border: 1px solid var(--gradient);
+    border-radius: 10px;
+    padding: 20px;
+}
+.services .service .cards .active {
+    border: 1px solid var(--main-color);
+}
+.services .service .cards .card .title {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.services .service .cards .card .sub-title {
+    font-size: 14px;
+}
+.services .service .cards .card .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.solid-btn {
+    color: var(--main-color);
+    font-weight: 600;
+}
+.solid-btn span {
+    margin-left: 5px;
+}
+.monitor {
+    width: 45px;
+}
+.dialysis {
+    width: 27px;
+}
+
+/* Start Packages Section */
+
+.packages {
+    padding: 50px 0;
+}
+.doctors .cards,
+.packages .cards {
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.doctors .cards .card,
+.packages .cards .card {
+    width: 390px;
+    border: 2px solid var(--gradient);
+    border-top: 10px solid var(--main-color);
+}
+.doctors .cards .card .card-info,
+.packages .cards .card .card-info {
+    padding: 10px 20px 20px;
+}
+.doctors .cards .card img,
+.packages .cards .card img {
+    width: 100%;
+}
+.doctors .cards .title,
+.packages .cards .title {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+.doctors .cards .sub-title,
+.packages .cards .sub-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Start Doctors Section */
+
+.doctors .cards .card img {
+    height: 475px;
+}
+
+/* Start Statistics Section */
+
+.facts {
+    background-color: #f9fbff;
+    padding: 50px 0;
+}
+.facts .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.facts .cards .card {
+    width: 350px;
+    text-align: center;
+}
+.facts .cards .card .title {
+    margin: 0;
+    font-size: 35px;
+    line-height: 45px;
+    color: var(--main-color);
+}
+
+/* Start Contact Section */
+.contact {
+    padding: 100px 0;
+}
+
+.contact-image,
+form {
+    width: 50%;
+}
+form input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    margin-bottom: 10px;
+}
+form h3 {
+    margin: 10px 0 5px;
+    color: var(--title);
+    font-size: 20px;
+    font-weight: 600;
+}
+form .center {
+    gap: 2%;
+}
+form .name,
+form .age,
+form .date,
+form .time {
+    width: 49%;
+}
+textarea {
+    padding: 10px 20px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 300px;
+    height: 300px;
+    background: var(--second-color);
+    border: none;
+    outline: 0;
+    resize: none;
+}
+form .all-btn {
+    margin: 20px 0 0 0;
+    justify-content: flex-start;
+}
+form .all-btn .btn {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+/*********** Start Footer ***********/
+
+footer {
+    background-color: var(--light-blue);
+}
+footer .top {
+    padding: 80px 0 50px;
+    align-items: flex-start;
+}
+footer .top .left {
+    width: 50%;
+}
+footer .top .left .logo {
+    width: 250px;
+    margin-bottom: 30px;
+}
+footer .top .left .location,
+footer .top .left .mail,
+footer .top .left .call {
+    justify-content: flex-start;
+    margin-top: 25px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+footer .top .left .location {
+    align-items: flex-start;
+}
+footer .top .left .location span,
+footer .top .left .mail span,
+footer .top .left .call span {
+    margin-left: 10px;
+}
+footer .top .right {
+    align-items: flex-start;
+}
+footer .top .right .links {
+    margin-left: 85px;
+}
+footer .top .right .links .title {
+    color: var(--title);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+footer .top .right .links  ul li a {
+    line-height: 36px;
+    color: var(--main-color);
+    font-size: 14px;
+}
+footer .top .right .links  ul li a:hover {
+    color: var(--title);
+} 
+footer .bottom {
+    padding: 20px 35px;
+    color: var(--title);
+    border-top: 2px solid var(--gradient);
+}
+footer .bottom .social-links img {
+    margin-left: 10px;
+}
+footer .bottom .designer a {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+/********************************************** Start Responsive ( Mobile Phones ) **********************************************/
+
+
+@media only screen and (max-width: 1300px) {
+        .home .image {
+            width: 300px;
+            height: 300px;
+            left: -70px;
+        }
+        .home .image img {
+            width: 500px;
+            left: -140px;
+        }
+        footer .top .right {
+            flex-wrap: wrap;
+        }
+    }
+@media only screen and (max-width: 950px) {
+        .home .image {
+            left: -35px;
+        }
+        .title-container .sub-title{
+            width: 75%;
+        }
+}
+@media only screen and (max-width: 780px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .title-container .title {
+        font-size: 30px;
+    }
+    .title-container .sub-title {
+        width: 100%;
+    } 
+
+    .home .top {
+        padding: 10px 15px;
+    }
+    .small-services {
+        display: none;
+    }
+    .home .links ul{ 
+        display: none;
+    }
+    .home .container .content {
+        margin-top: 0;
+        display: block;
+    }
+    .home .info {
+        width: 100% !important;
+        text-align: center;
+    }
+    .home .info .title {
+        font-size: 35px;
+        line-height: 55px;
+    }
+    .home .image {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .service {
+        display: block;
+    }
+    .service .image{
+        margin: 100px auto !important;
+    }
+    .service .cards {
+        width: 100% !important;
+    }
+    .services .service .image {
+        width: 350px;
+        height: 400px;
+        margin: 100px 0;
+    }
+    .services .service .image img {
+        right: 10px;
+        width: 350px;
+    }
+
+
+    .facts .cards {
+        gap: 50px;
+    }
+    .facts .cards .card .title {
+        font-size: 30px;
+    }
+
+    .contact-info {
+        display: block;
+    }
+    .contact-image, form {
+    width: 100%;
+    }
+    form .space {
+        display: block;
+    }
+    form .space input {
+        width: 100%;
+    }
+    footer .top {
+        display: block;
+    }
+    footer .top .left {
+        width: 100%;
+    }
+    footer .top .right{
+        display: block;
+    }
+    footer .top .right {
+        margin-top: 50px;
+    }
+    footer .top .right .links{
+        margin: 30px 0 0 0;
+    }
+    footer .top .right .links .title {
+        font-size: 25px;
+    }
+    footer .top .right .links ul li a {
+        font-size: 18px;
+    }
+    footer .bottom {
+        display: block;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    footer .designer {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .home .info .title {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .home .top span{
+        font-size: 10px;
+    }
+    .home .container .logos .logo{
+        width: 130px;
+    }
+    .menu-icon {
+        width: 35px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .about .cards .info .title {
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .about .cards .card {
+        padding: 50px 10px;
+    }
+    .service .image {
+        display: none;
+    }
+    .title-container .title {
+        font-size: 20px;
+    }
+    .title-container .title::before {
+        bottom: 5px;
+    }
+}
